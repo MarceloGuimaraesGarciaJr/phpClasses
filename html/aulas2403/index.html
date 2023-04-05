@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style.css">
+	<title>Index</title>
+</head>
+<body>
+	<h1>Área de cadastro</h1>
+	<form action="login.html" method="get">
+		<label>
+			Nome completo:<br>
+			<input type="text" name="Nome" placeholder="Digite seu nome"/>
+		</label>
+
+		<label>
+			Descrição: <br>
+			<textarea name="descricao"></textarea>
+		</label>
+
+		<label>
+			Categoria:<br>
+			<select name="took_a_number" title="Número">
+				<option value="recent">Recentes</option>
+				<option value="most_selled">Mais vendidos</option>
+				<option value="minor_to_major">Maior para o Menor</option>
+				<option value="major_to_minor">Menor para o Maior</option>
+				<option value="price" selected>Preço</option>
+			</select>
+		</label>
+
+		<label>
+			<input type="checkbox"> Eu Declado que li e aceito os <a class="termosLink" href="#">termos de privacidade</a>
+		</label>
+
+		<label>
+			<button value="Enviar">Fazer Cadastro</button>
+		</label>
+	</form>
+</body>
+</html>

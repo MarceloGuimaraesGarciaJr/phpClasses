@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Teste</title>
+</head>
+<body>
+    <h1>Área de Cadastro</h1>
+        <form action="cadastro.html" method="GET">
+            <input type="email" required title="Email" placeholder="Digite seu email"/>
+            <input type="submit"/>
+            <p>Esse form faz obrigatoriedade do email e envia para o /cadastro.html</p>
+        </form>
+
+    <h1>Type select</h1>
+        <form action="login.html" method="get">
+        <select name="took_a_number" title="Número">
+            <option value="recent">Recentes</option>
+            <option value="most_selled">Mais vendidos</option>
+            <option value="minor_to_major">Maior para o Menor</option>
+            <option value="major_to_minor">Menor para o Maior</option>
+            <option value="price" selected>Preço</option>
+        </select>
+            <input type="submit"/>
+        <p>Explicação da tag select, cria a lista, atribui valores pela tag "Value" e deixa prioridade o valor com o selected</p>
+            <p>Se colocar a tag Size e definir o tamanho, ele abrirá um multselect para selecionar os itens apontados, se for 2, vamos mandar 2</p>
+        </form>
+
+    <h1>Labels</h1>
+    <form action="login.html">
+    <label for="name">Nome Completo:</label><br>
+    <input type="text" placeholder="Digite seu primeiro nome" id="name">
+    <input type="submit"/>
+    </form>
+</body>
+</html>
