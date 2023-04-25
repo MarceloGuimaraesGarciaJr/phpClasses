@@ -304,3 +304,76 @@ footer .widget_title_text{
     font-size: 13px;
     color: var(--secondary-blue-color);
 }
+.menuMobile{
+    display: none;
+    width: 40px;
+    height: 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-right: 20px;
+}
+.mmLine{
+    background-color: #39aaE1;
+    height: 4px;
+}
+
+@media (max-width:600px){
+
+    .banner_headline{
+        padding: 20px;
+    }
+    .banner_headline h1{
+        font-size: 55px;
+    }
+    .banner_headline h2{
+        font-size: 17px;
+    }
+    .banner_option{
+        height: auto;
+        flex-direction: column;
+    }
+    #geral section{
+        padding: 20px;
+        margin-top: 120px;
+    }
+    .container{
+        flex-direction: column;
+    }
+    .widget_body1{
+        padding: 30px;
+    }
+    .widget_body2{
+        padding: 30px;
+    }
+    .widget_title{
+        margin-left: 20px;
+    }
+    .footer_menu{
+        flex-direction: column;
+    }
+    .footer_area{
+        flex-direction: column;
+    }
+   header .container{
+       flex-direction: row;
+   }
+   nav ul{
+       flex-direction: column;
+       display: none;
+       position: absolute;
+       left: 0;
+       width: 100%;
+       background-color: #FFFFFF;
+   }
+   header{
+       height: auto;
+   }
+   .logo{
+       padding-left: 20px;
+   }
+   .menuMobile{
+       display: flex;
+       flex-direction: column;
+       justify-content: space-around;
+   }
+}
