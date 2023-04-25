@@ -2,22 +2,13 @@
     display: flex;
     background-color: #ccc;
     flex-direction: row;
+    justify-content: space-around;
+    height: 600px;
 }
-.group1 {
+.container div{
+    width: 15%;
+    height: 15%;
     background-color: red;
     margin:10px;
     padding:10px;
-    flex: 1;
-}
-.group2 {
-    background-color: red;
-    margin:10px;
-    padding:10px;
-    flex: 1;
-}
-.group3 {
-    background-color: red;
-    margin:10px;
-    padding:10px;
-    flex: 2;
 }
