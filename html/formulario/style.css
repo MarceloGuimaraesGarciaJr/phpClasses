@@ -4,9 +4,9 @@
     padding: 0;
     font-family: Montserrat;
 }
-body{
+/*body{
     background-color: #ecedd5;
-}
+}*/
 section{
     display: flex;
     justify-content: center;
@@ -14,12 +14,10 @@ section{
 .container {
     display: flex;
     width: 70%;
-    height: auto;
     justify-content: center;
 }
 .content{
     width:100%;
-    height: auto;
     justify-content: center;
     align-items: center;
 }
@@ -33,7 +31,6 @@ section{
     flex-direction: column;
     justify-content: center;
     width: 30%;
-    height: auto;
 }
 .content .form h1{
     display: flex;
@@ -77,4 +74,13 @@ section{
     color: white;
     font-family: Montserrat;
     font-weight: 400;
+}
+
+@media(max-width: 600px){
+    .content form{
+        width: 100%;
+    }
+    .content .form h1{
+        text-align: center;
+    }
 }
