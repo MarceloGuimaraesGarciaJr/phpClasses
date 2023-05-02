@@ -255,7 +255,7 @@ footer .footer_text ul li{
 }
 
 
-@media(min-width: 375px){
+@media(max-width: 600px){
     nav{
         width: 375px;
     }
