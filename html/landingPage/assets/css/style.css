@@ -17,8 +17,10 @@ nav{
     height: 600px;
     border-bottom-left-radius: 200px;
 }
+a{
+    text-decoration: none;
+}
 .container{
-    display: flex;
     width: 1440px;
     height: auto;
 }
@@ -129,12 +131,13 @@ section .container{
 }
 .capsule{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 1440px;
 }
 .main_main_text{
     display: flex;
     justify-content: center;
+    width: 450px;
     margin-top: 150px;
     margin-left: 600px;
     font-size: 30px;
@@ -147,7 +150,7 @@ section .container{
 .main_main_title, .main_main_text_item{
     font-family: 'Overpass', sans-serif;
     color: hsl(237, 23%, 32%);
-    width: 550px;
+    width: 450px;
     margin-left: 150px;
     top: 160px;
     z-index: 1;
@@ -160,7 +163,7 @@ section .container{
     font-size: 20px;
     font-weight: 600;
 }
-.main_main_text_item{
+.main_main_text_item, .main_second_text{
     font-size: 16px;
     font-family: 'Overpass', sans-serif;
     font-weight: 300;
@@ -173,4 +176,87 @@ section .container{
     position: relative;
     z-index: -1;
     clip:rect(0,30px,0,0);
+}
+.banner2{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 1440px;
+    height: 420px;
+    background-color: rgb(45,46,64);
+    z-index: 1;
+    border-bottom-left-radius:150px;
+    border-top-right-radius: 150px;
+}
+.main_second_title{
+    color: white;
+    width: 550px;
+    margin-bottom: 20px;
+    font-size: 35px;
+    font-family: 'Overpass', sans-serif;
+    font-weight: 300;
+}
+.main_second_text{
+    width: 450px;
+}
+.primary{
+    width:550px;
+    height:265px;
+    color: white;
+    margin-top: 150px;
+    margin-right: 50px;
+}
+.secondary{
+    z-index: 2;
+    position: absolute;
+    margin-left: -600px;
+    margin-top: -65px;
+}
+.left_margin{
+    margin-left: 20px;
+    width: 450px;
+}
+footer{
+    display: flex;
+    background-color:hsl(240, 10%, 16%);
+    width: 1440px;
+    justify-content: space-around;
+}
+footer .footer_content {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+
+}
+.footer_text{
+    margin-bottom: 50px;
+}
+.main_title_footer{
+    color: white !important;
+    margin-bottom: 30px;
+    margin-top: 50px !important;
+}
+
+footer .footer_text ul li{
+    text-decoration: none;
+    display: block;
+    list-style: none;
+    margin-top: 0;
+    padding: 2px;
+    color: hsl(237deg 6.91% 49.34%);
+    font-family: 'Overpass', sans-serif;
+    font-weight: 300;
+}
+.logo_footer{
+    margin-top: 50px;
+}
+.bottom_margin{
+    margin-bottom:250px;;
+}
+
+
+@media(min-width: 375px){
+    nav{
+        width: 375px;
+    }
 }
