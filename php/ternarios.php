@@ -2,6 +2,8 @@
 //OR || AND &&
 // Se retiradas as chaves, ele reconhece uma linha de instrução, tornando ternário... mais de uma linha ele vai dar erro.
 //Abaixo tem um exemplo do código com chaves.
+
+// Operador ternário funciona da mesma forma que em outras linguagens $variavel = $condicao ? $valorSeVerdadeiro : $valorSeFalso;
 $idade = 18;
 $numeroDePessoas = 2;
 echo "Você só pode entrar se tiver mais de 18 anos " . PHP_EOL;
