@@ -15,8 +15,15 @@ function sacar($conta,$valor){
     return $conta;
 
 }
+function depositar($conta, float $valorADepositar){
+    if($valorADepositar > 0 ){
+        $conta['saldo'] += $valorADepositar;
+    }else{
+        exibeMensagem("Somente valores positivos");
 
-
+}
+    return $conta;
+};
 $contasCorrentes = [
     '123.456.789-10' => [
         'titular' => 'Maria',
@@ -33,8 +40,7 @@ $contasCorrentes = [
 ];
 
 $contasCorrentes['123.456.789-10'] = sacar($contasCorrentes['123.456.789-10'],500);
-$contasCorrentes['123.256.789-12'] = sacar($contasCorrentes['123.256.789-12'],500);
-
+$contasCorrentes['123.256.789-12'] = depositar($contasCorrentes['123.256.789-12'],0);
 
 foreach ($contasCorrentes as $cpf => $conta) {
     exibeMensagem($cpf . " " . $conta['titular'] . " "."R$ " . $conta['saldo']);
