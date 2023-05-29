@@ -1,29 +1,12 @@
 <?php
 
+//Require vai garantir o arquivo para executar o programa, vai dar erro no inicio do programa
+//Include vai incluir, porém, não vai deixar de executar
+//ele vai dar erro apenas quando chamar a primeira função ou item necessário, no caso do exemplo é o sacar ou o depositar.
+//require_once vai verificar se o arquivo já foi incluido, se foi, ele vai conntinuar a execução e naõ carregar duplicado.
 
-function exibeMensagem($mensagem){
-    echo $mensagem . PHP_EOL;
-}
+require 'functions.php';
 
-function sacar($conta,$valor){
-    if ($valor > $conta['saldo']){
-        exibeMensagem("Você não tem esse saldo");
-    } else
-    {
-        $conta['saldo'] -= $valor;
-    }
-    return $conta;
-
-}
-function depositar($conta, float $valorADepositar){
-    if($valorADepositar > 0 ){
-        $conta['saldo'] += $valorADepositar;
-    }else{
-        exibeMensagem("Somente valores positivos");
-
-}
-    return $conta;
-};
 $contasCorrentes = [
     '123.456.789-10' => [
         'titular' => 'Maria',
@@ -43,6 +26,6 @@ $contasCorrentes['123.456.789-10'] = sacar($contasCorrentes['123.456.789-10'],50
 $contasCorrentes['123.256.789-12'] = depositar($contasCorrentes['123.256.789-12'],0);
 
 foreach ($contasCorrentes as $cpf => $conta) {
-    exibeMensagem($cpf . " " . $conta['titular'] . " "."R$ " . $conta['saldo']);
+    exibeMensagem("O saldo da conta{$cpf} do títular {$conta['titular']} é: {$conta['saldo']}");
 }
 
