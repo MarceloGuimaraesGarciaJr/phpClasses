@@ -1,11 +1,22 @@
 <?php
 
 
-function exibeMensagem($mensagem){
+function exibeMensagem($mensagem)
+{
     echo $mensagem . PHP_EOL;
 }
 
+function sacar($conta,$valorASacar){
 
+    if ($valorASacar > $conta['saldo']){
+        exibeMensagem("Você não tem esse saldo");
+    } else
+    {
+        $conta['saldo'] -= $valorASacar;
+    }
+    return $conta;
+
+}
 
 $contasCorrentes = [
     '123.456.789-10' => [
@@ -21,26 +32,9 @@ $contasCorrentes = [
         'saldo' => 100
     ]
 ];
-if (500 > $contasCorrentes['123.456.789-10']['saldo']){
-    exibeMensagem("Você não tem esse saldo");
-} else
-{
-    $contasCorrentes['123.456.789-10']['saldo'] -= 500;
-}
 
-if (500 > $contasCorrentes['123.456.689-11']['saldo']){
-    exibeMensagem("Você não tem esse saldo");
-} else
-{
-    $contasCorrentes['123.456.689-11']['saldo'] -= 500;
-}
-
-if (500 > $contasCorrentes['123.256.789-12']['saldo']){
-    exibeMensagem("Você não tem esse saldo");
-} else
-{
-    $contasCorrentes['123.256.789-12']['saldo'] -= 500;
-}
+$contasCorrentes['123.456.789-10'] = sacar($contasCorrentes['123.456.789-10'],500);
+$contasCorrentes['123.456.689-11'] = sacar($contasCorrentes['123.456.689-11'],1200);
 
 
 foreach ($contasCorrentes as $cpf => $conta) {
