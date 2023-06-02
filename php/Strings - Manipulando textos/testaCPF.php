@@ -11,6 +11,6 @@ foreach ($cpfs as $cpf){
     if($validaCpf == 1){
         echo "O CPF {$cpf} é válido \n";
     }else{
-        echo "O CPF {$cpf} é inválido \n";
+        echo "O CPF {$cpf} é inválido, favor, verificar. \n";
     }
 }
