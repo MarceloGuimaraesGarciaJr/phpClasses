@@ -2,22 +2,25 @@
 
 class Conta
 {
-    private string $cpfTitular;
-    private string $nomeTitular;
+    private $titular;
     private float $saldo;
     private static $numeroContas;
     private static $codAgencia;
 
-    public function __construct(string $cpfTitular, string $nomeTitular)
+    public function __construct(titular $titular)
     {
         echo "Criando nova conta \n";
         $this-> saldo = 0;
-        $this->validaNomeTitular($nomeTitular);
-        $this->nomeTitular = $nomeTitular;
-        $this->cpfTitular = $cpfTitular;
+        $this->titular = $titular;
         self::$codAgencia = 77;
         self::$numeroContas ++;
     }
+
+    public function __destruct()
+    {
+        self::$numeroContas --;
+    }
+
     public function sacar(float $valorASacar):void{
         if ($valorASacar > $this->saldo){
             echo "Você não possui saldo \n";
@@ -44,19 +47,11 @@ class Conta
     public function extrato():float{
         return $this ->saldo;
     }
-
-    public function recuperaCpfTitular():string{
-        return $this->cpfTitular;
+    public function getTitular(){
+        return $this->titular->recuperaNome();
     }
-    public function recuperaNomeTitula():string{
-        return $this->nomeTitular;
-    }
-    private function validaNomeTitular(string $nomeTitular):void
-    {
-        if(strlen($nomeTitular)< 5){
-            echo "Nome deve ter pelo menos 5 caracteres";
-            exit();
-        }
+    public function getCpf(){
+        return $this->titular->recuperaCpf();
     }
     public static function recuperaNumeroContas():int{
         return self::$numeroContas;
