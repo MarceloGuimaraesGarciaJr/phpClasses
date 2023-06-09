@@ -1,5 +1,6 @@
 <?php
 
+namespace Alura\marcejo\model;
 class endereco
 
 {

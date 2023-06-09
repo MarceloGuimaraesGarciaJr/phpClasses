@@ -1,5 +1,7 @@
 <?php
 
+namespace Alura\marcejo\model\conta;
+
 class Conta
 {
     private $titular;
@@ -19,7 +21,7 @@ class Conta
         self::$numeroDeContas--;
     }
 
-    public function saca(float $valorASacar): void
+    public function sacarValor(float $valorASacar): void
     {
         if ($valorASacar > $this->saldo) {
             echo "Saldo indisponível";
@@ -29,7 +31,7 @@ class Conta
         $this->saldo -= $valorASacar;
     }
 
-    public function deposita(float $valorADepositar): void
+    public function depositarValor(float $valorADepositar)
     {
         if ($valorADepositar < 0) {
             echo "Valor precisa ser positivo";
@@ -46,8 +48,8 @@ class Conta
             return;
         }
 
-        $this->sacar($valorATransferir);
-        $contaDestino->depositar($valorATransferir);
+        $this->sacarValor($valorATransferir);
+        $contaDestino->depositarValor($valorATransferir);
     }
 
     public function recuperaSaldo(): float

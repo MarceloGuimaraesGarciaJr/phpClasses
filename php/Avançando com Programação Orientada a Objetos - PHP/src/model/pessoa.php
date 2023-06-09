@@ -1,5 +1,8 @@
 <?php
 
+namespace Alura\marcejo\model;
+use Alura\marcejo\model\cpf;
+
 class pessoa
 {
    protected $nome;

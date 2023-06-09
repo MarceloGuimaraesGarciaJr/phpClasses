@@ -1,24 +1,30 @@
 <?php
 
-require_once 'src/Conta.php';
-require_once 'src/endereco.php';
-require_once 'src/titular.php';
-require_once 'src/cpf.php';
+require_once 'src/model/conta/Conta.php';
+require_once 'src/model/endereco.php';
+require_once 'src/model/pessoa.php';
+require_once 'src/model/conta/titular.php';
+require_once 'src/model/cpf.php';
+
+use Alura\marcejo\model\pessoa;
+use Alura\marcejo\model\conta\Conta;
+use Alura\marcejo\model\endereco;
+use Alura\marcejo\model\funcionario;
+use Alura\marcejo\model\conta\titular;
+use Alura\marcejo\model\cpf;
+
+
 
 $endereco = new endereco("Porto Alegre","Passo da Areia","General Pedro","233");
-$marcelo = new titular(new CPF('123.456.789-10'), 'Marcelo Garcia',$endereco);
+$marcelo = new titular(new cpf('022.917.690-90'),'Marcelo Garcia',$endereco);
 $primeiraConta = new Conta($marcelo);
-$primeiraConta->deposita(500);
-$primeiraConta->saca(300); // isso é ok
 
-echo $primeiraConta->recuperaNomeTitular() . PHP_EOL;
-echo $primeiraConta->recuperaCpfTitular() . PHP_EOL;
-echo $primeiraConta->recuperaSaldo() . PHP_EOL;
-
+var_dump($primeiraConta);
+$primeiraConta->depositarValor(400);
+$primeiraConta->sacarValor(100);
+echo "{$primeiraConta->recuperaSaldo()} \n";
 $carolina = new titular(new cpf('698.549.548-10'), 'Carolina',$endereco);
 $segundaConta = new Conta($carolina);
-var_dump($segundaConta);
-
 $outroEndereco = new endereco("A","b","C","D");
 $outra = new Conta(new titular(new CPF('123.654.789-01'), 'Abcdefg',$outroEndereco));
 unset($segundaConta);
