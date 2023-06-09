@@ -6,8 +6,7 @@ class titular extends pessoa
 
     public function __construct(CPF $cpf, string $nome,endereco $endereco)
     {
-        $this->cpf = $cpf;
-        $this->nome = $nome;
+        parent::__construct($nome,$cpf);
         $this->endereco = $endereco;
     }
 
