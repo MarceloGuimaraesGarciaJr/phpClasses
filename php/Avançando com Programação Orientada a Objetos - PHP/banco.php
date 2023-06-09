@@ -1,15 +1,9 @@
 <?php
 
-require_once 'src/model/conta/Conta.php';
-require_once 'src/model/endereco.php';
-require_once 'src/model/pessoa.php';
-require_once 'src/model/conta/titular.php';
-require_once 'src/model/cpf.php';
+ require_once 'src/model/autoload.php';
 
-use Alura\marcejo\model\pessoa;
 use Alura\marcejo\model\conta\Conta;
 use Alura\marcejo\model\endereco;
-use Alura\marcejo\model\funcionario;
 use Alura\marcejo\model\conta\titular;
 use Alura\marcejo\model\cpf;
 
