@@ -2,17 +2,25 @@
 
 class cpf
 {
-    private string $cpf;
+    private $numero;
 
-    public function __construct(string $cpf)
+    public function __construct(string $numero)
     {
-        $this->cpf = $cpf;
+        $numero = filter_var($numero, FILTER_VALIDATE_REGEXP, [
+            'options' => [
+                'regexp' => '/^[0-9]{3}\.[0-9]{3}\.[0-9]{3}\-[0-9]{2}$/'
+            ]
+        ]);
+
+        if ($numero === false) {
+            echo "Cpf inválido";
+            exit();
+        }
+        $this->numero = $numero;
     }
-    public function getCpf():string
+
+    public function getCpf(): string
     {
-        return $this->cpf;
+        return $this->numero;
     }
-
-
-
 }
