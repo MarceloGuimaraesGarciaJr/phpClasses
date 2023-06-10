@@ -15,7 +15,7 @@ class titular extends pessoa
         $this->endereco = $endereco;
     }
 
-    public function recuperaEndereco(): endereco
+    public function recuperaEndereco():endereco
     {
         return $this->endereco;
     }

@@ -2,10 +2,10 @@
 
 namespace Alura\marcejo\model\conta;
 
-class Conta
+abstract class Conta
 {
     private $titular;
-    private $saldo;
+    protected $saldo;
     private static $numeroDeContas = 0;
 
     public function __construct(Titular $titular)
@@ -22,13 +22,13 @@ class Conta
     }
 
     public function sacarValor(float $valorASacar): void
-    {
+    {   $tarifaSaque = $valorASacar * $this->percentualTarifa();
         if ($valorASacar > $this->saldo) {
             echo "Saldo indisponível";
             return;
         }
 
-        $this->saldo -= $valorASacar;
+        $this->saldo -= ($valorASacar+$tarifaSaque);
     }
 
     public function depositarValor(float $valorADepositar)
@@ -39,17 +39,6 @@ class Conta
         }
 
         $this->saldo += $valorADepositar;
-    }
-
-    public function transfere(float $valorATransferir, Conta $contaDestino): void
-    {
-        if ($valorATransferir > $this->saldo) {
-            echo "Saldo indisponível";
-            return;
-        }
-
-        $this->sacarValor($valorATransferir);
-        $contaDestino->depositarValor($valorATransferir);
     }
 
     public function recuperaSaldo(): float
@@ -71,4 +60,6 @@ class Conta
     {
         return self::$numeroDeContas;
     }
+
+    abstract public function percentualTarifa():float;
 }
