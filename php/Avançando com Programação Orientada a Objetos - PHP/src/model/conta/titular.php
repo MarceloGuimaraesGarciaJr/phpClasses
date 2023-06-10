@@ -1,9 +1,7 @@
 <?php
 namespace Alura\marcejo\model\conta;
 
-use Alura\marcejo\model\endereco;
-use Alura\marcejo\model\cpf;
-use Alura\marcejo\model\pessoa;
+use Alura\marcejo\model\{endereco,cpf,pessoa};
 
 class titular extends pessoa
 {
