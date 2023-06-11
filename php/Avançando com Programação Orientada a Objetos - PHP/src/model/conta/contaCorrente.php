@@ -1,8 +1,8 @@
 <?php
 
-namespace Alura\marcejo\model\conta;
+namespace Alura\marcelo\model\conta;
 
-use Alura\marcejo\model\conta\Conta;
+use Alura\marcelo\model\conta\Conta;
 
 class contaCorrente extends Conta
 {

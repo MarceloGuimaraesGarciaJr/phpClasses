@@ -1,13 +1,13 @@
 <?php
 
- require_once 'src/model/autoload.php';
+ require_once 'autoload.php';
 
-use Alura\marcejo\model\conta\Conta;
-use Alura\marcejo\model\conta\contaCorrente;
-use Alura\marcejo\model\conta\contaPoupanca;
-use Alura\marcejo\model\endereco;
-use Alura\marcejo\model\conta\titular;
-use Alura\marcejo\model\cpf;
+use Alura\marcelo\model\conta\Conta;
+use Alura\marcelo\model\conta\contaCorrente;
+use Alura\marcelo\model\conta\contaPoupanca;
+use Alura\marcelo\model\endereco;
+use Alura\marcelo\model\conta\titular;
+use Alura\marcelo\model\cpf;
 
 
 

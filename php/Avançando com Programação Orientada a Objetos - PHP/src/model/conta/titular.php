@@ -1,11 +1,9 @@
 <?php
-namespace Alura\marcejo\model\conta;
+namespace Alura\marcelo\model\conta;
 
-use Alura\marcejo\model\endereco;
-use Alura\marcejo\model\cpf;
-use Alura\marcejo\model\pessoa;
+use Alura\marcelo\model\{autenticar, endereco, cpf, pessoa};
 
-class titular extends pessoa
+class titular extends pessoa implements autenticar
 {
     private $endereco;
 
@@ -18,5 +16,9 @@ class titular extends pessoa
     public function recuperaEndereco():endereco
     {
         return $this->endereco;
+    }
+    public function podeAutenticar(string $senha): bool
+    {
+        return $senha === 'abcd';
     }
 }

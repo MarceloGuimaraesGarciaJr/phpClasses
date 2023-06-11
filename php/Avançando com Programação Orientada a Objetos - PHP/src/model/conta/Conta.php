@@ -1,6 +1,6 @@
 <?php
 
-namespace Alura\marcejo\model\conta;
+namespace Alura\marcelo\model\conta;
 
 abstract class Conta
 {
