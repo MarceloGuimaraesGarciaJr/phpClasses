@@ -6,13 +6,14 @@ use Alura\marcejo\model\endereco;
 class funcionario extends pessoa
 {
     private string $cargo;
+    private float $salario;
 
-
-    public function __construct(string $nome, cpf $cpf, string $cargo)
+    public function __construct(string $nome, cpf $cpf, string $cargo,string $salario)
     {
 
         parent::__construct($nome,$cpf);
         $this->cargo = $cargo;
+        $this->salario = $salario;
     }
     public function recuperaCargo(): string
     {
@@ -23,6 +24,16 @@ class funcionario extends pessoa
     {
         $this->validaNomeTitular($nome);
         $this->nome = $nome;
+    }
+
+    public function calculaBonificacao():float
+    {
+        return $this->salario * 0.1;
+    }
+
+    public function recuperaSalario():float
+    {
+        return $this->salario;
     }
 
 }

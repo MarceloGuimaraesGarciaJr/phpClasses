@@ -1,6 +1,6 @@
 <?php
 
- require_once 'src/model/autoload.php';
+ require_once 'autoload.php';
 
 use Alura\marcejo\model\conta\Conta;
 use Alura\marcejo\model\conta\contaCorrente;
