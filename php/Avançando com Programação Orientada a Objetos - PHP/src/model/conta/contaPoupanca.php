@@ -1,7 +1,7 @@
 <?php
 
-namespace Alura\marcejo\model\conta;
-use Alura\marcejo\model\conta\Conta;
+namespace Alura\marcelo\model\conta;
+use Alura\marcelo\model\conta\Conta;
 
 class contaPoupanca extends Conta
 {

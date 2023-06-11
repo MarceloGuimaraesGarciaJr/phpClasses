@@ -1,7 +1,7 @@
 <?php
 
-namespace Alura\marcejo\model;
-use Alura\marcejo\model\cpf;
+namespace Alura\marcelo\model;
+use Alura\marcelo\model\cpf;
 
 class pessoa
 {

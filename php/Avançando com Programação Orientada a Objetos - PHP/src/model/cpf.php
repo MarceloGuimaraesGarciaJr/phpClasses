@@ -1,5 +1,5 @@
 <?php
-namespace Alura\marcejo\model;
+namespace Alura\marcelo\model;
 class cpf
 {
     private $numero;

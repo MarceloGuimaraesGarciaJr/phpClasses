@@ -2,8 +2,8 @@
 
 require_once 'autoload.php';
 
-use Alura\marcejo\model\conta\{contaPoupanca,contaCorrente,titular};
-use Alura\marcejo\model\{endereco,cpf};
+use Alura\marcelo\model\conta\{contaPoupanca,contaCorrente,titular};
+use Alura\marcelo\model\{endereco,cpf};
 
 $address = new endereco("Porto Alegre","Passo da areia","General Pedro Bittencourt",'233');
 $cpf = new cpf('022.917.690-90');

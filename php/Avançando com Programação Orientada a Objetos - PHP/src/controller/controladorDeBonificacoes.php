@@ -1,8 +1,8 @@
 <?php
 
-namespace Alura\marcejo\controller;
+namespace Alura\marcelo\controller;
 
-use Alura\marcejo\model\funcionario;
+use Alura\marcelo\model\funcionario\funcionario;
 
 class controladorDeBonificacoes
 {

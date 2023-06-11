@@ -1,8 +1,8 @@
 <?php
-namespace Alura\marcejo\model;
-use Alura\marcejo\model\cpf;
-use Alura\marcejo\model\pessoa;
-use Alura\marcejo\model\endereco;
+namespace Alura\marcelo\model\funcionario;
+
+use Alura\marcelo\model\cpf;
+use Alura\marcelo\model\pessoa;
 class funcionario extends pessoa
 {
     private string $cargo;
