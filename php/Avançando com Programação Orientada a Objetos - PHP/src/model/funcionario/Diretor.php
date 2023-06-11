@@ -3,14 +3,16 @@
 namespace Alura\marcelo\model\funcionario;
 
 
-class Diretor extends funcionario
+use Alura\marcelo\model\autenticar;
+
+class Diretor extends funcionario implements autenticar
 {
     public function calculaBonificacao():float
     {
         return $this->recuperaSalario() * 2;
     }
 
-    public function autenticar(string $senha):bool
+    public function podeAutenticar(string $senha):bool
     {
         return $senha == "1234";
     }

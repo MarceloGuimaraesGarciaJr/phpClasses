@@ -3,21 +3,16 @@ namespace Alura\marcelo\model\funcionario;
 
 use Alura\marcelo\model\cpf;
 use Alura\marcelo\model\pessoa;
-class funcionario extends pessoa
+abstract  class funcionario extends pessoa
 {
     private string $cargo;
     private float $salario;
 
-    public function __construct(string $nome, cpf $cpf, string $cargo,string $salario)
+    public function __construct(string $nome, cpf $cpf,string $salario)
     {
 
         parent::__construct($nome,$cpf);
-        $this->cargo = $cargo;
         $this->salario = $salario;
-    }
-    public function recuperaCargo(): string
-    {
-        return $this->cargo;
     }
 
     public function alteraNome(string $nome):void
@@ -26,14 +21,19 @@ class funcionario extends pessoa
         $this->nome = $nome;
     }
 
-    public function calculaBonificacao():float
-    {
-        return $this->salario * 0.1;
-    }
+    abstract public function calculaBonificacao():float;
 
     public function recuperaSalario():float
     {
         return $this->salario;
     }
 
+    public function recebeAumento(float $valorAumento)
+    {
+        if($valorAumento < 0){
+            echo "Valor deve ser positivo";
+            return;
+        }
+        $this->salario+=$valorAumento;
+    }
 }

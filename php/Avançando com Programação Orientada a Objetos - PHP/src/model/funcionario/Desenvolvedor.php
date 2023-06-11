@@ -8,6 +8,12 @@ class Desenvolvedor extends funcionario
 {
     public function calculaBonificacao(): float
     {
-        return $this->recuperaSalario() * 0.05;
+      return 500;
     }
+
+    public function sobeNivel()
+    {
+        return $this->recebeAumento($this->recuperaSalario()*0.75);
+    }
+
 }
