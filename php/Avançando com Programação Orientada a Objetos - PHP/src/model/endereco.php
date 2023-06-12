@@ -1,7 +1,7 @@
 <?php
 
 namespace Alura\marcelo\model;
-class endereco
+final class endereco
 
 {
     private $cidade;
@@ -17,22 +17,42 @@ class endereco
         $this->numero = $numero;
     }
 
-    public function getCidade()
+    public function recuperaCidade()
     {
         return $this->cidade;
     }
-public function getBairro()
+public function recuperaBairro()
     {
         return $this->bairro;
     }
-    public function getRua()
+    public function recuperaRua()
     {
         return $this->rua;
     }
-    public function getNumero()
+    public function recuperaNumero()
     {
         return $this->numero;
     }
+    private function setNumero($numero): void
+    {
+        $this->numero = $numero;
+    }
 
+    public function __toString():string
+    {
+        return "{$this->rua}, {$this->numero}, {$this->bairro}, {$this->cidade} \n";
+    }
+
+    public function __get($atributo):string
+    {
+        $nomeMetodo ='recupera'.ucfirst($atributo);
+        return $this->$nomeMetodo().PHP_EOL;
+    }
+
+    public function __set($atributo,$valor)
+    {
+        $nomeMetodo = 'set'.ucfirst($atributo);
+        return $this->$nomeMetodo($valor);
+    }
 
 }
