@@ -1,6 +1,6 @@
 <?php
 namespace Alura\marcelo\model;
-class cpf
+final class cpf
 {
     private $numero;
 
