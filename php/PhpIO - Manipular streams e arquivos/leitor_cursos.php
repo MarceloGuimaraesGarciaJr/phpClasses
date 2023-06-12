@@ -30,6 +30,9 @@ $arquivo = 'list-courses.txt';
 
 $cursos = file_get_contents($arquivo);
 
+$cursosArray = file($arquivo);
+
 echo $cursos;
+var_dump($cursosArray);
 
 // se usar o file, sem colocar o get contents ele vai listar tudo em um array
