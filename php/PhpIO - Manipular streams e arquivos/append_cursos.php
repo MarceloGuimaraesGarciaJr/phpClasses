@@ -10,3 +10,5 @@ fclose($arquivo);
 // como fazer isso de forma mais fácil
 
 file_put_contents('cursos-lista.txt',$curso, FILE_APPEND);
+
+
