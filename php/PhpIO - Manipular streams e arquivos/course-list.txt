@@ -1,2 +1,4 @@
-Como esquecer o que aprendeu em um dia
-Cursos n40
+Design Patterns PHP I
+Design Patterns PHP II
+Curso de PDO
+Curso de orientação de Objetos a PHP
