@@ -10,7 +10,6 @@ use Alura\marcelo\model\conta\titular;
 use Alura\marcelo\model\cpf;
 
 
-
 $endereco = new endereco("Porto Alegre","Passo da Areia","General Pedro","233");
 $marcelo = new titular(new cpf('022.917.690-90'),'Marcelo Garcia',$endereco);
 $primeiraConta = new contaCorrente($marcelo);
