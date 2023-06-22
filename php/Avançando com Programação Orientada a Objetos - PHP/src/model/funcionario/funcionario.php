@@ -5,8 +5,8 @@ use Alura\marcelo\model\cpf;
 use Alura\marcelo\model\pessoa;
 abstract  class funcionario extends pessoa
 {
-    private string $cargo;
-    private float $salario;
+    private  $cargo;
+    private  $salario;
 
     public function __construct(string $nome, cpf $cpf,string $salario)
     {
@@ -15,7 +15,7 @@ abstract  class funcionario extends pessoa
         $this->salario = $salario;
     }
 
-    public function alteraNome(string $nome):void
+    public function alteraNome(string $nome)
     {
         $this->validaNome($nome);
         $this->nome = $nome;
